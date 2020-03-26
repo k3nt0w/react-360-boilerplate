@@ -1,22 +1,16 @@
 declare module 'react-360' {
-  import {
-    View as RNView,
-    ViewProps as RNViewProps,
-    Image as RNImage,
-    Text as RNText,
-    Event
-  } from 'react-native';
+  import { View as RNView, ViewProps as RNViewProps, Image as RNImage, Text as RNText, Event } from 'react-native'
 
   interface EventHandlerProps {
-    onEnter?: (event: any) => void;
-    onExit?: (event: any) => void;
-    onInput?: (event: any) => void;
-    onChange?: (event: any) => void;
-    onHeadPose?: (event: any) => void;
-    onChangeCaptured?: (event: any) => void;
-    onInputCaptured?: (event: any) => void;
-    onHeadPoseCaptured?: (event: any) => void;
-    onMove?: (event: any) => void;
+    onEnter?: (event: any) => void
+    onExit?: (event: any) => void
+    onInput?: (event: any) => void
+    onChange?: (event: any) => void
+    onHeadPose?: (event: any) => void
+    onChangeCaptured?: (event: any) => void
+    onInputCaptured?: (event: any) => void
+    onHeadPoseCaptured?: (event: any) => void
+    onMove?: (event: any) => void
   }
 
   // React Native overrides
@@ -56,12 +50,5 @@ declare module 'react-360' {
   // texture
 
   // Direct access to RN properties
-  export {
-    Animated,
-    AppRegistry,
-    AsyncStorage,
-    NativeModules,
-    StyleSheet
-  } from 'react-native';
-
+  export { Animated, AppRegistry, AsyncStorage, NativeModules, StyleSheet } from 'react-native'
 }
