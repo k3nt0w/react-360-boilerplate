@@ -1,5 +1,5 @@
-import { AppRegistry } from 'react-360';
+import { AppRegistry } from 'react-360'
 
-import Application from './Application';
+import Application from './Application'
 
-AppRegistry.registerComponent('Application', () => Application);
+AppRegistry.registerComponent('Application', () => Application)

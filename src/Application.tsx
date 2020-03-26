@@ -1,5 +1,5 @@
-import React from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-360';
+import React from 'react'
+import { AppRegistry, StyleSheet, Text, View } from 'react-360'
 
 export default class Application extends React.Component {
   public render() {
@@ -9,7 +9,7 @@ export default class Application extends React.Component {
           <Text style={styles.greeting}>Welcome to React 360!</Text>
         </View>
       </View>
-    );
+    )
   }
 }
 
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
   greeting: {
     fontSize: 30
   }
-});
+})
 
-AppRegistry.registerComponent('Application', () => Application);
+AppRegistry.registerComponent('Application', () => Application)
