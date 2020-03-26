@@ -11,23 +11,25 @@ export default class Application extends React.Component<{}, { isOpen: boolean }
 
   render() {
     return (
-      <View style={styles.panel}>
-        {/* <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>Welcome to React 360!</Text>
-        </View>
-        <View
-          style={styles.greetingBox}
-          onInput={e => {
-            const inputEvent = e.nativeEvent.inputEvent
-            if (inputEvent.action === 'down') {
-              this.setState({ isOpen: !this.state.isOpen })
-            }
-          }}
-        >
-          <Text style={styles.greeting}>Button Test</Text>
-        </View> */}
-        <Entity source={{ obj: asset('Alocasia.obj'), mtl: asset('Alocasia.mtl') }} />
-      </View>
+      // <View style={styles.panel}>
+      //   <View style={styles.greetingBox}>
+      //     <Text style={styles.greeting}>Welcome to React 360!</Text>
+      //   </View>
+      //   <View
+      //     style={styles.greetingBox}
+      //     onInput={e => {
+      //       const inputEvent = e.nativeEvent.inputEvent
+      //       if (inputEvent.action === 'down') {
+      //         this.setState({ isOpen: !this.state.isOpen })
+      //       }
+      //     }}
+      //   >
+      //     <Text style={styles.greeting}>Button Test</Text>
+      //   </View>
+      // </View>
+
+      //@ts-ignore
+      <Entity source={{ obj: asset('Alocasia.obj'), mtl: asset('Alocasia.mtl') }} />
     )
   }
 }
