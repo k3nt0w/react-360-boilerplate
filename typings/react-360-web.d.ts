@@ -4,6 +4,9 @@ declare module 'react-360-web' {
   type ShapeType = 'Cylinder' | 'Flat'
 
   // enum SurfaceShape { Cylinder, Flat }
+  export class ReactInstance {
+    getAssetURL: (path: string) => void
+  }
 
   // React Native overrides
   export class Surface {

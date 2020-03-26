@@ -1,5 +1,11 @@
 declare module 'react-360' {
-  import { View as RNView, ViewProps as RNViewProps, Image as RNImage, Text as RNText, Event } from 'react-native'
+  import {
+    View as RNView,
+    ViewProps as RNViewProps,
+    Image as RNImage,
+    Text as RNText,
+    Button as RNButton
+  } from 'react-native'
 
   interface EventHandlerProps {
     onEnter?: (event: any) => void
@@ -13,10 +19,19 @@ declare module 'react-360' {
     onMove?: (event: any) => void
   }
 
+  interface VrButtonProps {
+    disabled?: boolean
+    onButtonPress?: (event: any) => void
+    onButtonRelease?: (event: any) => void
+    onClick?: (event: any) => void
+    onLongClick?: (event: any) => void
+  }
+
   // React Native overrides
   export class View extends React.Component<RNViewProps & EventHandlerProps> {}
   export class Image extends RNImage {}
   export class Text extends RNText {}
+  export class Entity extends React.Component<{ source: Object }> {}
 
   // // VR Components and modules
   // AmbientLight
@@ -40,7 +55,7 @@ declare module 'react-360' {
   // VideoControl
   // MediaPlayerState
   // VrAnimated
-  // VrButton
+  export class VrButton extends React.Component<VrButtonProps> {}
   // VrHeadModel
   // VrSoundEffects
   // Environment
@@ -48,7 +63,8 @@ declare module 'react-360' {
   // // React VR-specific utilities
   // staticAssetURL
   // texture
-
+  type Asset = (path: string) => void
+  export const asset: Asset
   // Direct access to RN properties
   export { Animated, AppRegistry, AsyncStorage, NativeModules, StyleSheet } from 'react-native'
 }
